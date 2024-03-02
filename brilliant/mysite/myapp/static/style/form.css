@@ -1,0 +1,218 @@
+html{
+    font-size: 100%;
+    font-family: vazir-med;
+    direction: rtl;
+    
+}
+* {
+    box-sizing: border-box;
+}
+
+body{
+    color: #1f1f1f;
+}
+
+.invalid button{
+    border-radius: 15px;
+}
+.invalidh1 h1{
+    font-family: "vazir-bold";
+    font-size: 250px;
+}
+.lolo{
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    background: url(../FilmPicture/yes.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100vh;
+}
+.lol{
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    background: url(../FilmPicture/nono.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding: 3rem 0;
+}
+.banana{
+    padding: 4rem;
+    align-self: center;
+    background-color: #fff;
+    width: 40%;
+    border-radius: 30px;
+}
+@media (max-width:880px) {
+    .banana{
+        width: 50%;
+    }
+}
+@media (max-width:700px) {
+    .banana{
+        width: 60%;
+    }
+}
+.form{
+    width: 100%;
+    background-color: #fff;
+}
+
+.form .form-tytle{
+    font-size: 1.7rem;
+    font-weight: bold;
+    font-family:"vazir-bold";
+    color: #1f1f1f;
+    margin-bottom: 4rem;
+    text-align: right;
+    
+}
+
+.form label{
+    font-weight: bold;
+    margin-top: 2rem;
+}
+
+.form input.form-control{
+    width: 100%;
+    font-family: inherit;
+    padding: .6rem ;
+    border: 2px solid #1f1f1f;
+    border-radius: 10px;
+}
+
+.form label , 
+.form input:not([type="checkbox"]) {
+    display: block;
+    margin-bottom: .7rem;
+
+}
+
+.form input.form-control::placeholder{
+    color: #1f1f1f ;
+    font-size: .4rems;
+    font-family: vazir-light ;
+}
+.form input.form-control::-moz-placeholder{
+    color: #1f1f1f ;
+    font-size: .4rems;
+    font-family: vazir-light ;
+}
+.form input.form-control::-webkit-input-placeholder{
+    color: #1f1f1f ;
+    font-size: .4rems;
+    font-family: vazir-light ;
+}
+.form input.form-control::-ms-input-placeholder{
+    color: #1f1f1f ;
+    font-size: .4rems;
+    font-family: vazir-light ;
+}
+
+.checkbox input {
+    display: none;
+}
+.checkbox{
+    position: relative;
+    padding: .3rem 2.2rem 1rem 0;
+}
+.form .form-tytle .btn{
+    cursor: pointer;
+}
+input:invalid{
+    background: #fff !important;
+    border: 2px solid #1f1f1f !important;
+}
+.checkbox .checkmark{
+    height: 25px;
+    width: 25px;
+    background: rgba(0,0,0, .1);
+    position: absolute;
+    right: 0;
+    top: 0;
+    border-radius: 19px;
+}
+
+.checkbox:hover .checkmark{
+    background: rgba(0,0,0, .3) ;
+}
+
+.checkbox input:checked ~ .checkmark{
+    background: #2196f3;
+}
+
+.checkmark::after{
+    content: "";
+    position: absolute;
+    display: none;
+    width: 5px;
+    height: 12px;
+    border : solid #1f1f1f ;
+    top :5px;
+    right:9px;
+    border-width: 0 3px 3px 0;
+    transform: rotate(45deg);
+}
+.checkbox input:checked ~ .checkmark::after{
+    display: block;
+}
+input.form-control{
+    color: #1f1f1f;
+}
+.form input:focus{
+    border: 2px solid;
+    outline: none;
+}
+
+.btn{
+    padding: .5rem 1rem;
+    border: none;
+    font-family: vazir-bold;
+    border-radius: 15px;
+    background: #179e7e;
+    color: #1f1f1f;
+    border: 3px solid #179e7e;
+    margin-top: 2rem;
+    cursor: pointer;
+}
+
+
+.forget{
+    display: flex;
+    flex-direction: row;
+    align-content: space-between;
+    margin-top: 2rem;
+    font-family: vazir-light ;
+}
+.forget div{
+    display: flex;
+}
+.forget a{
+    font-size: 70%;
+    color: #1f1f1f;
+    font-family: vazir-regular;
+    text-decoration-line: none;
+}
+.forget p{
+    font-size: 70%;
+    color: #1f1f1f;
+    margin: 0 .3rem;
+    font-family: vazir-regular;
+}
+@media (max-width:642px) {
+    .forget{
+        flex-direction: column;
+    }
+    .forget a{
+        margin-bottom: .4rem;
+    }
+}
+@media (max-width:376px) {
+    .forget a{
+        font-size: .8rem;
+    }
+    .forget p{
+        font-size: .8rem;
+    }
+}

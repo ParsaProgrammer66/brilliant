@@ -1,0 +1,56 @@
+{% load static %}
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+    <meta name="viewport" content="width=device-width , initial-scale=1.0 ">
+    <title>Sign In</title>
+    <link rel="stylesheet" href="{% static './style/font.css' %}">
+    <link rel="stylesheet" href="{% static './style/reset.css' %}">
+    <link rel="stylesheet" href="{% static './style/form.css' %}">
+    <link rel="stylesheet" href="{% static './style/password-change.css' %}">
+
+</head>
+
+<body>
+    <div class="lolo">
+        <div class="banana">
+            <form class="form" action="#" method='POST'>
+                {% csrf_token %}
+                <h2 class="form-tytle">فرم ورود</h2>
+                <label for="name">نام کاربری</label>
+                <input type="text" name="username" id="username" class="form-control" placeholder="لطفا نام را وارد کنید" required {{form.username}}>
+
+                <label for="password">رمز عبور</label>
+                <input type="password" name="password" id="password" class="form-control" placeholder="لطفا پسوردتان را وارد کنید" required minlength="5" {{form.password}}>
+                <button type="submit" class="btn">ورود</button>
+                <div class="forget">
+                    <div>
+                        <p>رمز عبور را فراموش کرده اید؟  </p>
+                    </div>
+                        
+                    <div>
+                        <a href="{% url 'password_reset'%}">بازیابی رمز عبور</a>
+                    </div>
+                </div>
+            </br>
+                <div class="password-change">
+                    <div>
+                        <p> میخواهید رمز عبورتان را تغییر دهید؟ </p>
+                    </div>
+                        
+                    <div>
+                        <a href="{% url 'password_change'%}">تغییر رمز عبور</a>
+                    </div>
+                </div>
+            </form>
+
+        </div>
+    </div>
+
+
+
+</body>
+
+</html>

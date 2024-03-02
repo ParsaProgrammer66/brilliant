@@ -1,0 +1,48 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta name="viewport" content="width=device-width , initial-scale=1.0 ">
+    <title>Sign Up</title>
+    <link rel="stylesheet" href="{% static './style/font.css' %}">
+    <link rel="stylesheet" href="{% static './style/reset.css' %}">
+    <link rel="stylesheet" href="{% static './style/form.css' %}">
+
+</head>
+
+<body>
+    <div class="lol">
+        <div class="banana">
+            <form class="form" action="#" method="POST">
+                {% csrf_token %}
+                <h2 class="form-tytle">فرم ثبت نام</h2>
+                <label for="name">نام کاربری</label>
+                <input type="text" name="username" id="username" class="form-control" placeholder="لطفا نام را وارد کنید" required {{form.username}}>
+                <label for="email">ایمیل</label>
+                <input type="email" name="email" id="email" class="form-control" placeholder="لطفا ایمیل را وارد کنید" required {{form.email}}>
+                <label for="password">رمز عبور</label>
+                <input type="password" name="password" id="password" class="form-control" placeholder="لطفا پسوردتان را وارد کنید" required minlength="8" {{form.password}}>
+            <label for="confirm-password">تکرار رمز عبور</label>
+                <input type="password2" name="password2" id="password2" class="form-control" placeholder="لطفا پسوردتان را وارد کنید" required minlength="8" {{form.password2}}>
+                <label for="rules" class="checkbox">
+                    <input type="checkbox" name="rules" id="rules" required>قوانین را قبول دارم
+                    <span class="checkmark"></span>
+                </label>
+                <button type="submit" class="btn">ثبت نام</button>
+                
+                <div class="forget">
+                    <div>
+                        <a href="{% url 'login'%}">قبلا ثبت نام کرده ام</a>
+                    </div>
+                </div>
+            </form>
+
+        </div>
+    </div>
+
+
+</body>
+
+
+</html>

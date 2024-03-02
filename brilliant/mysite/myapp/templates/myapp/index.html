@@ -1,0 +1,152 @@
+{% load static %}
+<!DOCTYPE html>
+{% block content %}
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static './style/reset.css' %}">
+    <link rel="stylesheet" href="{% static './style/font.css' %}">
+    <link rel="stylesheet" href="{% static './style/style.css' %}">
+    <title>brilliant</title>
+</head>
+
+<body>
+    <header class="header">
+        <div class="hheader">
+            <div class="icon">
+                <img src="{% static './FilmPicture/logo.png'%}" alt="">
+            </div>
+            <div class="logiii">
+                    {% if user.is_authenticated %}
+                    <a href="{% url 'logout' %}">logout</a>
+                    <p class="user">سلام {{ user.username }}</p>
+                    {% else %}
+                    <a href="{% url 'signup' %}" class="klkl">ثبت نام</a>
+                    
+                    <a href="{% url 'login' %}">وارد شوید</a>
+                    {% endif %}
+                    <a href="{% url 'aboutus' %}" class="klkl">درباره ما</a>
+            </div>
+        </div>
+    </header>
+    <main class="main">
+        <div class="information">
+            <div class="gif">
+                <video preload="auto" autoplay="autoplay" muted="muted" playsinline="" loop="loop" data-v-051c56b6="">
+                    <source src="{% static './FilmPicture/gif.mp4' %}" type="video/mp4" data-v-051c56b6="">
+                </video>
+            </div>
+            <div class="iinformation ghh">
+                
+                <h1>بهترین راه برای یادگیری ریاضی و علوم کامپیوتر</h1>
+                <p>حل مسئله تعاملی هدایت شده که موثر و سرگرم کننده است. مفاهیم را در 15 دقیقه در روز استاد شوید.</p>
+                <a href="{% url 'signup' %}">شروع کنید</a>
+            </div>
+        </div>
+        <div class="learning">
+            <div class="java java1">
+                <a href="{% url 'css' %}">
+                    <img src="{% static './FilmPicture/css.png' %}" alt="">
+                </a>
+            </div>
+            <div class="java">
+                <a href="{% url 'django' %}">
+                    <img src="{% static './FilmPicture/django.png' %}" alt="">
+                </a>
+            </div>
+            <div class="java">
+                <a href="{% url 'html' %}">
+                    <img src="{% static './FilmPicture/html.png' %}" alt="">
+                </a>
+            </div>
+            <div class="java py">
+                <a href="{% url 'python' %}">
+                    <img src="{% static './FilmPicture/python.png' %}" alt="">
+                </a>
+            </div>
+            <div class="java hhh">
+                <a href="{% url 'js' %}">
+                    <img src="{% static './FilmPicture/java.png' %}" alt="">
+                </a>
+            </div>
+        </div>
+        <div class="zer">
+            <h2>مفاهیم را در 15 دقیقه در روز استاد شوید</h2>
+            <p>چه یک مبتدی کاملاً مبتدی باشید و چه آماده غواصی در یادگیری ماشینی و فراتر از آن باشید ، تیم ما با درس‌های سرگرم‌کننده و کوچک شما را به آسانی می‌توانید به سطح سریع برساند.</p>
+        </div>
+        <div class="information">
+            <div class="gif">
+                <video preload="auto" autoplay="autoplay" muted="muted" playsinline="" loop="loop" data-v-051c56b6="">
+                    <source src="{% static './FilmPicture/giff.mp4' %}" type="video/mp4" data-v-051c56b6="">
+                </video>
+            </div>
+            <div class="iinformation">
+                <h2>یادگیری موثر و عملی</h2>
+                <p>دروس بصری و تعاملی باعث می شود مفاهیم حس بصری را پیدا کنند. بنابراین حتی برای ایده های پیچیده فقط کلیک کنید. بازخورد بلادرنگ و توضیحات ساده ما یادگیری را کارآمد می کند.</p>
+            </div>
+        </div>
+        <div class="information jh">
+            <div class="iinformation">
+                <h2>در سطح خود یاد بگیرید</h2>
+                <p>دانش آموزان و متخصصان به طور یکسان می توانند مهارت های خفته را تقویت کنند یا مهارت های جدیدی بیاموزند. از طریق درس ها و چالش های متناسب با سطح شما پیشرفت کنید.</p>
+            </div>
+            <div class="gif">
+                <img src="{% static './FilmPicture/gifff.svg' %}" alt="">
+            </div>
+        </div>
+        <div class="information">
+            <div class="gif">
+                <img src="{% static './FilmPicture/giffff.png' %}" alt="">
+            </div>
+            <div class="iinformation">
+                <h2>دروس هدایت شده به اندازه لقمه</h2>
+                <p>ما به شما کمک می‌کنیم که در مسیر خود بمانید، پیشرفت شما را ببینیم، و مهارت‌های حل مسئله‌تان را یک مفهوم در یک زمان ایجاد کنیم.</p>
+            </div>
+        </div>
+        <div class="information jh">
+            <div class="iinformation">
+                <h2>با انگیزه بمانید</h2>
+                <p>یک عادت یادگیری واقعی را با محتوای سرگرم کننده که همیشه با سرعت خوب، ردیابی پیشرفت شبیه به بازی و یادآوری های دوستانه است، ایجاد کنید.</p>
+            </div>
+            <div class="gif">
+                <img src="{% static './FilmPicture/gifffff.svg' %}" alt="">
+            </div>
+        </div>
+        <hr class="hr">
+        <div class='change'>
+            {% if user.is_authenticated %}
+            
+            {% else %}
+            <div class="join">
+            <h1>به ما بپیوندید و عضوی از ما شوید</h1>
+            <center><a href="{% url 'signup' %}">شروع کنید</a></center>
+            {% endif %}
+        </div>
+    </main>
+    <footer class="footer">
+        <div class="ffooter">
+            <div class="iconn">
+                <img src="{% static './FilmPicture/Bale.png' %}" alt="">
+                <h3>تیم ما</h3>
+            </div>
+            <div class="team">
+                <h3>تیم ما</h3>
+                <a href="{% url 'aboutus' %}">درباره ما</a>
+            </div>
+        </div>
+        <div class="media">
+            <div class="bale">
+                <a href="#"><img src="{% static './FilmPicture/Bale.png' %}" alt=""></a>
+            </div>
+            <div class="telegram">
+                <a href="#"><img src="{% static './FilmPicture/Telegram.jpg' %}" alt=""></a>
+            </div>
+        </div>
+        <div class="c">
+            <p>برای استفاده از مطالب ما، داشتن «هدف غیرتجاری» و ذکر «منبع» کافیست. تمام حقوق اين وب‌سايت نیز برای تیم ما است.</p>
+        </div>
+    </footer>
+</body>
+{% endblock %}
+</html>
