@@ -113,11 +113,10 @@
                 <img src="{% static './FilmPicture/gifffff.svg' %}" alt="">
             </div>
         </div>
-        <hr class="hr">
         <div class='change'>
-            {% if user.is_authenticated %}
-            
+        {% if user.is_authenticated %}
             {% else %}
+            <hr class="hr">
             <div class="join">
             <h1>به ما بپیوندید و عضوی از ما شوید</h1>
             <center><a href="{% url 'signup' %}">شروع کنید</a></center>
