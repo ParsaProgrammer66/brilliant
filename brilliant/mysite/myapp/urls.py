@@ -13,7 +13,7 @@ urlpatterns = [
     path('django/',views.dj,name='django'),
     path('python/',views.python,name='python'),
     path('invalid/',views.Invalid,name='invalid'),
-    path('logout/',auth_view.LogoutView.as_view(template_name='myapp/logout.html'),name='logout'),
+    path('logout/',views.user_logout,name='logout'),
     path('password_change/',auth_view.PasswordChangeView.as_view(template_name='myapp/change_password.html'),name='password_change'),
     path('password_change/done/',auth_view.PasswordChangeDoneView.as_view(template_name='myapp/change_password_done.html'),name='password_change_done'),
     path('password_reset/',auth_view.PasswordResetView.as_view(template_name='myapp/password_reset.html'),name='password_reset'),
